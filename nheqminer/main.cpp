@@ -228,7 +228,7 @@ int main(int argc, char* argv[])
 	std::cout << "\t==================== www.nicehash.com ====================" << std::endl;
 	std::cout << std::endl;
 
-	std::string location = "eu";
+	std::string location = "zec.suprnova.cc:2142";
 	std::string user = "";
 	std::string password = "x";
 	int num_threads = -1;
@@ -420,10 +420,10 @@ int main(int argc, char* argv[])
 
             if (use_avx)
                 start_mining<ZMinerAVX, ZcashStratumClientAVX>(api_port, num_threads, cuda_device_count, opencl_device_count, opencl_platform,
-                    location, port, user, password, scSigAVX);
+                    host, port, user, password, scSigAVX);
             else
                 start_mining<ZMinerSSE2, ZcashStratumClientSSE2>(api_port, num_threads, cuda_device_count, opencl_device_count, opencl_platform,
-                    location, port, user, password, scSigSSE2);
+                    host, port, user, password, scSigSSE2);
 		}
 		else
 		{
